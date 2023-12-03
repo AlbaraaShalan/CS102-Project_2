@@ -18,17 +18,17 @@ public class Sale implements SalesInter {
 	public Cart getCart() {
 		return this.cart;
 	}
-
+	@Override
 	public double calculateTotal() {
 		total = cart.calculateTotalWithoutDiscount();
 		return cart.calculateTotalWithoutDiscount();
 	}
-	
+	@Override
 	public double calculateDiscount() {
 		discount = cart.calculateTotalDiscount();
 		return cart.calculateTotalDiscount();
 	}
-	
+	@Override
 	public void Display() { // Displays the details of the sale, including customer name, cart items, and total amount.
 		System.out.println("Name: " + this.customerName);
 		System.out.println("\n      Cart Items ");
