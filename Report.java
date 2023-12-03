@@ -34,13 +34,13 @@ public class Report implements ReportInter{
 	public void setPopularProducts(ArrayList<Product> popularProducts) {
 		PopularProducts = popularProducts;
 	}
-
+	@Override
 	public void addSale(Sale sale) {
 		sales.add(sale);
 		total += (sale.calculateTotal() - sale.calculateDiscount());
 		PopularProducts.add(sale.getCart().items.get(0).getProduct());
 	}
-	
+	@Override	
 	public void Display() {
 		System.out.println("Total Sale: " + total);
 		for(Product item:PopularProducts) {
